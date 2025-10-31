@@ -95,3 +95,11 @@ window.addEventListener('scroll', updateStepIndicator);
 setInterval(() => {
     title.classList.toggle('glow-text');
 }, 2000);
+
+// Zoom nas imagens ao clicar
+const imageItems = document.querySelectorAll('.image-item');
+imageItems.forEach(item => {
+    item.addEventListener('click', function() {
+        this.classList.toggle('zoomed');
+    });
+});
