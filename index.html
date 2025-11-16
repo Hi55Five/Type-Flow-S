@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Guia Script Redação Paraná - Central de Ferramentas de Automação Escolar">
     <title>Guia Script Redação Paraná - Exploit</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
     <style>
         :root {
             --primary: #6366f1;
@@ -45,7 +47,7 @@
             color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 20%),
                 radial-gradient(circle at 90% 80%, rgba(6, 214, 160, 0.1) 0%, transparent 20%);
         }
@@ -95,9 +97,11 @@
             0% {
                 stroke-dashoffset: 80;
             }
+
             50% {
                 stroke-dashoffset: 0;
             }
+
             100% {
                 stroke-dashoffset: -80;
             }
@@ -243,15 +247,22 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: 
+            background:
                 radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(6, 214, 160, 0.1) 0%, transparent 50%);
             animation: float 6s ease-in-out infinite;
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
 
         .hero-content {
@@ -276,9 +287,17 @@
         }
 
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(99, 102, 241, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(99, 102, 241, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+            }
         }
 
         .hero-badge i {
@@ -370,7 +389,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: left 0.5s;
         }
 
@@ -475,7 +494,7 @@
             background: var(--gradient-1);
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 8px;
             font-weight: 600;
             cursor: pointer;
@@ -483,7 +502,8 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            margin: 0 auto;
+            margin: 0 10px 10px 10px;
+            font-size: 14px;
         }
 
         .copy-btn:hover {
@@ -495,399 +515,12 @@
             background: var(--success);
         }
 
-        /* Guide Section */
-        .guide-section {
-            padding: 120px 0;
-            background: var(--bg-dark);
-            position: relative;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-subtitle {
-            color: var(--primary);
-            font-weight: 600;
-            font-size: 1rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .guide-card {
-            background: var(--card-bg);
-            border-radius: 16px;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            position: relative;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
-        }
-
-        .guide-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-1);
-            transform: scaleX(1);
-        }
-
-        .guide-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            background: var(--card-hover);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .card-content {
-            padding: 25px;
-        }
-
-        .card-header {
+        .button-group {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-
-        .card-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: var(--text);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .card-title i {
-            color: var(--primary);
-            font-size: 1.8rem;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            background: rgba(99, 102, 241, 0.1);
-            border-radius: 12px;
-        }
-
-        /* Step Indicator */
-        .step-indicator {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 2rem;
-            position: relative;
-        }
-
-        .step-indicator::before {
-            content: '';
-            position: absolute;
-            top: 15px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background-color: rgba(255, 255, 255, 0.1);
-            z-index: 1;
-        }
-
-        .step-dot {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            position: relative;
-            z-index: 2;
-            transition: background-color 0.3s ease;
-        }
-
-        .step-dot.active {
-            background-color: var(--accent);
-        }
-
-        .step-label {
-            position: absolute;
-            top: 35px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 0.7rem;
-            white-space: nowrap;
-            color: var(--text-secondary);
-        }
-
-        /* Progress Bar */
-        .progress-bar {
-            height: 5px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 5px;
-            margin: 1rem 0;
-            overflow: hidden;
-        }
-
-        .progress {
-            height: 100%;
-            background-color: var(--accent);
-            width: 0%;
-            transition: width 0.5s ease;
-        }
-
-        /* Steps */
-        .step {
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            position: relative;
-        }
-
-        .step:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .step-number {
-            display: inline-block;
-            background-color: var(--primary);
-            color: white;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 35px;
-            margin-right: 15px;
-            font-weight: bold;
-        }
-
-        .step-content {
-            display: inline-block;
-            width: calc(100% - 60px);
-            vertical-align: top;
-        }
-
-        .step-content p {
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-        }
-
-        /* Image Gallery */
-        .image-gallery {
-            display: flex;
             flex-wrap: wrap;
             gap: 15px;
-            margin-top: 1rem;
-            justify-content: center;
-        }
-
-        .image-item {
-            flex: 0 1 280px;
-            max-width: 280px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-            background: var(--card-bg);
-        }
-
-        .image-item:hover {
-            transform: scale(1.03);
-        }
-
-        .image-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.3s ease;
-            max-height: 400px;
-            object-fit: contain;
-        }
-
-        .image-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .image-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0,0,0,0.8);
-            color: white;
-            padding: 8px;
-            font-size: 0.8rem;
-            text-align: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .image-item:hover .image-caption {
-            opacity: 1;
-        }
-
-        .placeholder-image {
-            width: 100%;
-            height: 200px;
-            background-color: rgba(255, 255, 255, 0.05);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-secondary);
-            font-style: italic;
-            gap: 10px;
-            border-radius: 4px;
-        }
-
-        /* Warning Box */
-        .warning {
-            background-color: rgba(239, 68, 68, 0.1);
-            border-left: 4px solid var(--danger);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-
-        .warning i {
-            color: var(--danger);
-            font-size: 1.5rem;
-            margin-top: 2px;
-        }
-
-        .warning-content h4 {
-            color: var(--text);
-            margin-bottom: 8px;
-            font-size: 1.2rem;
-        }
-
-        .warning-content p {
-            color: var(--text-secondary);
-            margin: 0;
-        }
-
-        /* Info Box */
-        .info-box {
-            background-color: rgba(99, 102, 241, 0.1);
-            border-left: 4px solid var(--primary);
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 8px;
-        }
-
-        .info-box h4 {
-            color: var(--text);
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-
-        .info-box ul {
-            margin-left: 1.5rem;
-            margin-top: 0.5rem;
-        }
-
-        .info-box li {
-            margin-bottom: 8px;
-            color: var(--text-secondary);
-        }
-
-        .info-box strong {
-            color: var(--accent);
-        }
-
-        /* Theme Toggle */
-        .theme-toggle {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
-            border-radius: 50%;
-            width: 45px;
-            height: 45px;
-            color: white;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            transition: transform 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .theme-toggle:hover {
-            transform: scale(1.1);
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        /* Back to Top */
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: var(--gradient-1);
-            color: white;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
-            transition: all 0.3s ease;
-            opacity: 0;
-            visibility: hidden;
-            z-index: 999;
-            font-size: 20px;
-        }
-
-        .back-to-top.show {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .back-to-top:hover {
-            transform: translateY(-5px) scale(1.1);
-            box-shadow: 0 12px 35px rgba(99, 102, 241, 0.5);
-        }
-
-        /* Particles Background */
-        .particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .particle {
-            position: absolute;
-            background: var(--primary);
-            border-radius: 50%;
-            opacity: 0.3;
-            animation: float-particle 20s infinite linear;
-        }
-
-        @keyframes float-particle {
-            0% { transform: translateY(0) rotate(0deg); }
-            100% { transform: translateY(-1000px) rotate(360deg); }
+            margin-top: 20px;
         }
 
         /* Footer */
@@ -1021,6 +654,68 @@
             font-size: 14px;
         }
 
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--gradient-1);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+            font-size: 20px;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 12px 35px rgba(99, 102, 241, 0.5);
+        }
+
+        /* Particles Background */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            background: var(--primary);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float-particle 20s infinite linear;
+        }
+
+        @keyframes float-particle {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(-1000px) rotate(360deg);
+            }
+        }
+
         /* Responsive */
         @media (max-width: 1200px) {
             .hero h1 {
@@ -1032,12 +727,12 @@
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
+
             .hero-stats {
                 flex-wrap: wrap;
                 justify-content: center;
             }
-            
+
             .stat {
                 margin-bottom: 20px;
             }
@@ -1047,7 +742,7 @@
             .hamburger {
                 display: flex;
             }
-            
+
             .nav-links {
                 position: fixed;
                 top: 70px;
@@ -1063,65 +758,62 @@
                 border-left: 1px solid rgba(255, 255, 255, 0.1);
                 box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
             }
-            
+
             .nav-links.active {
                 right: 0;
             }
-            
+
             .nav-links li {
                 margin: 15px 0;
                 width: 100%;
             }
-            
+
             .nav-links a {
                 display: block;
                 padding: 12px 0;
                 font-size: 18px;
             }
-            
+
             .hero {
                 padding: 160px 0 80px;
             }
-            
+
             .hero h1 {
                 font-size: 2.2rem;
             }
-            
+
             .hero h2 {
                 font-size: 1.2rem;
             }
-            
+
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .btn {
                 width: 100%;
                 justify-content: center;
                 max-width: 300px;
             }
-            
+
             .footer-content {
                 flex-direction: column;
             }
-            
+
             .footer-links {
                 gap: 40px;
             }
 
-            .image-item {
-                flex: 0 1 250px;
-                max-width: 250px;
+            .button-group {
+                flex-direction: column;
+                align-items: center;
             }
-            
-            .step-indicator {
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-            
-            .step-dot {
-                margin-bottom: 25px;
+
+            .copy-btn,
+            .btn {
+                width: 250px;
+                justify-content: center;
             }
         }
 
@@ -1129,33 +821,9 @@
             .hero {
                 padding: 140px 0 60px;
             }
-            
+
             .hero h1 {
                 font-size: 2rem;
-            }
-            
-            .image-item {
-                flex: 0 1 100%;
-                max-width: 100%;
-            }
-
-            .step-content {
-                width: calc(100% - 50px);
-            }
-
-            .step-number {
-                width: 30px;
-                height: 30px;
-                line-height: 30px;
-                margin-right: 10px;
-            }
-
-            .card-content {
-                padding: 20px;
-            }
-
-            .card-title {
-                font-size: 1.5rem;
             }
 
             .stat-number {
@@ -1164,6 +832,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Loading Screen -->
     <div class="loading">
@@ -1190,7 +859,6 @@
                 </a>
                 <ul class="nav-links">
                     <li><a href='#code'>Código</a></li>
-                    <li><a href='#guide'>Guia</a></li>
                     <li><a href="https://chat.whatsapp.com/G5KZXq9yiclE8VHsF15eb8" target="_blank">Suporte</a></li>
                 </ul>
                 <button class="hamburger">
@@ -1207,22 +875,22 @@
         <div class="container">
             <div class="hero-content">
                 <span class="hero-badge">
-                    <i class="fas fa-rocket"></i> Guia Completo
+                    <i class="fas fa-rocket"></i> Script Automatizado
                 </span>
                 <h1>Script <span class="gradient-text">Redação Paraná</span></h1>
-                <h2>GUIA PASSO A PASSO PARA CONFIGURAÇÃO E USO</h2>
+                <h2>FERRAMENTA AUTOMATIZADA PARA O SISTEMA DE REDAÇÃO</h2>
                 <p>
-                    Aprenda a configurar e utilizar o script do Redação Paraná com este guia completo e ilustrado. 
-                    Apenas para fins educacionais e de exemplo.
+                    Utilize este script JavaScript para automatizar processos no sistema
+                    Redação Paraná. Apenas para fins educacionais e de exemplo.
                 </p>
                 <div class="hero-stats">
                     <div class="stat">
-                        <span class="stat-number">11</span>
-                        <span class="stat-label">Passos</span>
+                        <span class="stat-number">V</span>
+                        <span class="stat-label">mult plataform</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">11</span>
-                        <span class="stat-label">Imagens</span>
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">tutoriais</span>
                     </div>
                     <div class="stat">
                         <span class="stat-number">100%</span>
@@ -1233,8 +901,9 @@
                     <a href="#code" class="btn btn-primary btn-large">
                         <i class="fas fa-code"></i> Copiar Código
                     </a>
-                    <a href="#guide" class="btn btn-secondary btn-large">
-                        <i class="fas fa-play-circle"></i> Iniciar Guia
+                    <a href="https://chat.whatsapp.com/G5KZXq9yiclE8VHsF15eb8" target="_blank"
+                        class="btn btn-secondary btn-large">
+                        <i class="fas fa-question-circle"></i> Suporte
                     </a>
                 </div>
             </div>
@@ -1245,257 +914,30 @@
     <section class="code-section" id="code">
         <div class="container">
             <div class="code-container">
-                <h2 class="code-title">Primeiro Passo: Copie o Código</h2>
-                <p class="code-subtitle">Copie este código JavaScript para usar no guia a seguir</p>
-                
+                <h2 class="code-title">Escolha o Método de Instalação</h2>
+                <p class="code-subtitle">Selecione a forma mais fácil para você usar o script</p>
+
                 <div class="code-box">
                     <div class="code-content" id="js-code">
-javascript:(function(){const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/Hi55Five/Type@main/script.js?'+Date.now();document.head.appendChild(s);})();
+                        javascript:(function(){const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/Hi55Five/Type@main/script.js?'+Date.now();document.head.appendChild(s);})();
                     </div>
-                    <button class="copy-btn" id="copy-btn">
-                        <i class="fas fa-copy"></i> Copiar Código
-                    </button>
+
+                    <div class="button-group">
+                        <button class="copy-btn" id="copy-btn">
+                            <i class="fas fa-copy"></i> Copiar Código (celular)
+                        </button>
+
+                        <a class="btn btn-primary"
+                            href="javascript:(function(){const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/Hi55Five/Type@main/script.js?'+Date.now();document.head.appendChild(s);})();">
+                            Arrastar e soltar (PC)
+                        </a>
+                    </div>
                 </div>
                 
-                <p class="code-subtitle">Após copiar o código, prossiga para o guia abaixo</p>
-                <a href="#guide" class="btn btn-primary">
-                    <i class="fas fa-arrow-down"></i> Continuar para o Guia
+                <p class="code-subtitle">Escolha o método que preferir para usar o script</p>
+                <a href="https://chat.whatsapp.com/G5KZXq9yiclE8VHsF15eb8" target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Entrar no Suporte
                 </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Guide Section -->
-    <section class="guide-section" id="guide">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-subtitle">Tutorial Completo</div>
-                <h2 class="categoria-title">
-                    <i class="fas fa-cogs"></i> Como Configurar o Script Redação
-                </h2>
-            </div>
-            
-            <div class="guide-card">
-                <div class="card-content">
-                    <div class="card-header">
-                        <h2 class="card-title">
-                            <i class="fas fa-cogs"></i> Configuração do Script
-                        </h2>
-                        <button class="theme-toggle" id="themeToggle">
-                            <i class="fas fa-sun"></i>
-                        </button>
-                    </div>
-                    
-                    <!-- Step 0 -->
-                    <div class="step">
-                        <span class="step-number">0</span>
-                        <div class="step-content">
-                            <p>Copie o código JavaScript que está na seção acima. Você vai precisar dele mais tarde.</p>
-                            <div class="info-box">
-                                <h4>Dica Importante</h4>
-                                <p>Certifique-se de copiar o código completo antes de prosseguir.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 1 -->
-                    <div class="step">
-                        <span class="step-number">1</span>
-                        <div class="step-content">
-                            <p>Entre no site do Redação Paraná</p>
-                            <div class="image-gallery">
-                                <div class="image-item">
-                                    <img src="imagens/1.png" alt="Página inicial do Redação Paraná" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                                    <div class="placeholder-image" style="display:none">
-                                        <i class="fas fa-image fa-2x"></i>
-                                        <span>Página inicial do Redação Paraná</span>
-                                    </div>
-                                    <div class="image-caption">Página inicial do Redação Paraná</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 2 -->
-                    <div class="step">
-                        <span class="step-number">2</span>
-                        <div class="step-content">
-                            <p>Entre na redação que quer que seja feita</p>
-                            <div class="image-gallery">
-                                <div class="image-item">
-                                    <img src="imagens/2.png" alt="Detalhes da redação" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                                    <div class="placeholder-image" style="display:none">
-                                        <i class="fas fa-image fa-2x"></i>
-                                        <span>Detalhes da redação</span>
-                                    </div>
-                                    <div class="image-caption">Detalhes da redação</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 3 -->
-                    <div class="step">
-                        <span class="step-number">3</span>
-                        <div class="step-content">
-                            <p>Clique nos 3 pontinhos</p>
-                            <div class="image-gallery">
-                                <div class="image-item">
-                                    <img src="imagens/3.png" alt="Menu de três pontos" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                                    <div class="placeholder-image" style="display:none">
-                                        <i class="fas fa-image fa-2x"></i>
-                                        <span>Menu de três pontos</span>
-                                    </div>
-                                    <div class="image-caption">Menu de três pontos</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 4 -->
-                    <div class="step">
-                        <span class="step-number">4</span>
-                        <div class="step-content">
-                            <p>Clique na estrela</p>
-                            <div class="image-gallery">
-                                <div class="image-item">
-                                    <img src="imagens/4.png" alt="Opção de favoritos" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                                    <div class="placeholder-image" style="display:none">
-                                        <i class="fas fa-image fa-2x"></i>
-                                        <span>Opção de favoritos</span>
-                                    </div>
-                                    <div class="image-caption">Opção de favoritos</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 5 -->
-                    <div class="step">
-                        <span class="step-number">5</span>
-                        <div class="step-content">
-                            <p>Clique nos 3 pontinhos de novo e vá em favoritos</p>
-                            <div class="image-gallery">
-                                <div class="image-item">
-                                    <img src="imagens/5.png" alt="Menu favoritos" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                                    <div class="placeholder-image" style="display:none">
-                                        <i class="fas fa-image fa-2x"></i>
-                                        <span>Menu favoritos</span>
-                                    </div>
-                                    <div class="image-caption">Menu favoritos</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 6 -->
-                    <div class="step">
-                        <span class="step-number">6</span>
-                        <div class="step-content">
-                            <p>Vá até a guia que você favoritou e clique nos 3 pontinhos e editar</p>
-                            <div class="image-gallery">
-                                <div class="image-item">
-                                    <img src="imagens/6.png" alt="Editor de favoritos" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                                    <div class="placeholder-image" style="display:none">
-                                        <i class="fas fa-image fa-2x"></i>
-                                        <span>Editor de favoritos</span>
-                                    </div>
-                                    <div class="image-caption">Editor de favoritos</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 7 -->
-                    <div class="step">
-                        <span class="step-number">7</span>
-                        <div class="step-content">
-                            <p>Edite o nome para "Script Redação" e na URL cole o código que copiou</p>
-                            <div class="image-gallery">
-                                <div class="image-item">
-                                    <img src="imagens/7.png" alt="Editor de favoritos com código" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                                    <div class="placeholder-image" style="display:none">
-                                        <i class="fas fa-image fa-2x"></i>
-                                        <span>Editor de favoritos com código</span>
-                                    </div>
-                                    <div class="image-caption">Editor de favoritos com código</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 8 -->
-                    <div class="step">
-                        <span class="step-number">8</span>
-                        <div class="step-content">
-                            <p>Volte ao site e vá na barra de pesquisa</p>
-                            <div class="image-gallery">
-                                <div class="image-item">
-                                    <img src="imagens/8.png" alt="Barra de pesquisa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                                    <div class="placeholder-image" style="display:none">
-                                        <i class="fas fa-image fa-2x"></i>
-                                        <span>Barra de pesquisa</span>
-                                    </div>
-                                    <div class="image-caption">Barra de pesquisa</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 9 -->
-                    <div class="step">
-                        <span class="step-number">9</span>
-                        <div class="step-content">
-                            <p>Digite "Script Redação"</p>
-                            <div class="image-gallery">
-                                <div class="image-item">
-                                    <img src="imagens/9.png" alt="Pesquisa por Script Redação" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                                    <div class="placeholder-image" style="display:none">
-                                        <i class="fas fa-image fa-2x"></i>
-                                        <span>Pesquisa por Script Redação</span>
-                                    </div>
-                                    <div class="image-caption">Pesquisa por Script Redação</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 10 -->
-                    <div class="step">
-                        <span class="step-number">10</span>
-                        <div class="step-content">
-                            <p>Clique na que tem uma estrela do lado</p>
-                            <div class="image-gallery">
-                                <div class="image-item">
-                                    <img src="imagens/10.png" alt="Resultado da pesquisa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                                    <div class="placeholder-image" style="display:none">
-                                        <i class="fas fa-image fa-2x"></i>
-                                        <span>Resultado da pesquisa</span>
-                                    </div>
-                                    <div class="image-caption">Resultado da pesquisa</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 11 -->
-                    <div class="step">
-                        <span class="step-number">11</span>
-                        <div class="step-content">
-                            <p>Seja feliz :D</p>
-                            <div class="image-gallery">
-                                <div class="image-item">
-                                    <img src="imagens/11.png" alt="Redação concluída" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                                    <div class="placeholder-image" style="display:none">
-                                        <i class="fas fa-image fa-2x"></i>
-                                        <span>Redação concluída</span>
-                                    </div>
-                                    <div class="image-caption">Redação concluída</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -1512,17 +954,19 @@ javascript:(function(){const s=document.createElement('script');s.src='https://c
                         Exploit
                     </div>
                     <p class="footer-description">
-                        Plataforma inovadora desenvolvida para oferecer ferramentas 
+                        Plataforma inovadora desenvolvida para oferecer ferramentas
                         inteligentes que revolucionam o aprendizado na educação digital.
                     </p>
                     <div class="social-card">
-                        <a href="https://www.instagram.com/exploit.ofc/" target="_blank" class="social-link social-instagram">
+                        <a href="https://www.instagram.com/exploit.ofc/" target="_blank"
+                            class="social-link social-instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
                         <a href="https://github.com/Hi55Five" target="_blank" class="social-link social-github">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://chat.whatsapp.com/G5KZXq9yiclE8VHsF15eb8" target="_blank" class="social-link social-whatsapp">
+                        <a href="https://chat.whatsapp.com/G5KZXq9yiclE8VHsF15eb8" target="_blank"
+                            class="social-link social-whatsapp">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
@@ -1532,8 +976,8 @@ javascript:(function(){const s=document.createElement('script');s.src='https://c
                         <h4>Recursos</h4>
                         <ul>
                             <li><a href="#code">Código</a></li>
-                            <li><a href="#guide">Guia</a></li>
-                            <li><a href="https://chat.whatsapp.com/G5KZXq9yiclE8VHsF15eb8" target="_blank">Suporte</a></li>
+                            <li><a href="https://chat.whatsapp.com/G5KZXq9yiclE8VHsF15eb8" target="_blank">Suporte</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="link-group">
@@ -1541,7 +985,8 @@ javascript:(function(){const s=document.createElement('script');s.src='https://c
                         <ul>
                             <li><a href="https://www.instagram.com/exploit.ofc/" target="_blank">Instagram</a></li>
                             <li><a href="https://github.com/Hi55Five" target="_blank">GitHub</a></li>
-                            <li><a href="https://chat.whatsapp.com/G5KZXq9yiclE8VHsF15eb8" target="_blank">WhatsApp</a></li>
+                            <li><a href="https://chat.whatsapp.com/G5KZXq9yiclE8VHsF15eb8" target="_blank">WhatsApp</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -1559,11 +1004,11 @@ javascript:(function(){const s=document.createElement('script');s.src='https://c
 
     <script>
         // JavaScript para funcionalidades do site
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Loading screen
-            setTimeout(function() {
+            setTimeout(function () {
                 document.querySelector('.loading').style.opacity = '0';
-                setTimeout(function() {
+                setTimeout(function () {
                     document.querySelector('.loading').style.display = 'none';
                 }, 500);
             }, 2000);
@@ -1571,16 +1016,16 @@ javascript:(function(){const s=document.createElement('script');s.src='https://c
             // Menu hamburger
             const hamburger = document.querySelector('.hamburger');
             const navLinks = document.querySelector('.nav-links');
-            
+
             if (hamburger) {
-                hamburger.addEventListener('click', function() {
+                hamburger.addEventListener('click', function () {
                     navLinks.classList.toggle('active');
                     hamburger.classList.toggle('active');
                 });
             }
 
             // Header scroll effect
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 const header = document.querySelector('header');
                 if (window.scrollY > 100) {
                     header.classList.add('scrolled');
@@ -1591,16 +1036,16 @@ javascript:(function(){const s=document.createElement('script');s.src='https://c
 
             // Back to top button
             const backToTopButton = document.querySelector('.back-to-top');
-            
-            window.addEventListener('scroll', function() {
+
+            window.addEventListener('scroll', function () {
                 if (window.pageYOffset > 300) {
                     backToTopButton.classList.add('show');
                 } else {
                     backToTopButton.classList.remove('show');
                 }
             });
-            
-            backToTopButton.addEventListener('click', function() {
+
+            backToTopButton.addEventListener('click', function () {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
@@ -1608,17 +1053,17 @@ javascript:(function(){const s=document.createElement('script');s.src='https://c
             function createParticles() {
                 const particlesContainer = document.getElementById('particles');
                 const particleCount = 30;
-                
+
                 for (let i = 0; i < particleCount; i++) {
                     const particle = document.createElement('div');
                     particle.className = 'particle';
-                    
+
                     // Random properties
                     const size = Math.random() * 4 + 1;
                     const posX = Math.random() * 100;
                     const delay = Math.random() * 20;
                     const duration = Math.random() * 10 + 20;
-                    
+
                     particle.style.width = `${size}px`;
                     particle.style.height = `${size}px`;
                     particle.style.left = `${posX}%`;
@@ -1626,7 +1071,7 @@ javascript:(function(){const s=document.createElement('script');s.src='https://c
                     particle.style.animationDuration = `${duration}s`;
                     particle.style.background = i % 2 === 0 ? 'var(--primary)' : 'var(--accent)';
                     particle.style.opacity = Math.random() * 0.4 + 0.1;
-                    
+
                     particlesContainer.appendChild(particle);
                 }
             }
@@ -1650,24 +1095,24 @@ javascript:(function(){const s=document.createElement('script');s.src='https://c
             // Code copy functionality
             const copyBtn = document.getElementById('copy-btn');
             const jsCode = document.getElementById('js-code');
-            
+
             if (copyBtn && jsCode) {
-                copyBtn.addEventListener('click', function() {
+                copyBtn.addEventListener('click', function () {
                     // Select the text
                     const range = document.createRange();
                     range.selectNode(jsCode);
                     window.getSelection().removeAllRanges();
                     window.getSelection().addRange(range);
-                    
+
                     // Copy the text
                     try {
                         const successful = document.execCommand('copy');
                         if (successful) {
                             copyBtn.innerHTML = '<i class="fas fa-check"></i> Código Copiado!';
                             copyBtn.classList.add('copied');
-                            
+
                             // Reset button after 2 seconds
-                            setTimeout(function() {
+                            setTimeout(function () {
                                 copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copiar Código';
                                 copyBtn.classList.remove('copied');
                             }, 2000);
@@ -1675,70 +1120,13 @@ javascript:(function(){const s=document.createElement('script');s.src='https://c
                     } catch (err) {
                         console.error('Falha ao copiar o código: ', err);
                     }
-                    
+
                     // Deselect the text
                     window.getSelection().removeAllRanges();
                 });
             }
-
-            // Progress bar functionality
-            const progressBar = document.getElementById('progressBar');
-            const steps = document.querySelectorAll('.step');
-            
-            if (progressBar && steps.length > 0) {
-                window.addEventListener('scroll', function() {
-                    const guideSection = document.querySelector('.guide-section');
-                    const guideTop = guideSection.offsetTop;
-                    const guideHeight = guideSection.offsetHeight;
-                    const windowHeight = window.innerHeight;
-                    
-                    const scrollPosition = window.scrollY;
-                    const guideBottom = guideTop + guideHeight;
-                    
-                    if (scrollPosition >= guideTop && scrollPosition <= guideBottom) {
-                        const progress = ((scrollPosition - guideTop) / (guideHeight - windowHeight)) * 100;
-                        progressBar.style.width = Math.min(Math.max(progress, 0), 100) + '%';
-                    }
-                });
-            }
-
-            // Image gallery modal functionality
-            const imageItems = document.querySelectorAll('.image-item');
-            imageItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    const img = this.querySelector('img');
-                    if (img && img.src) {
-                        // Create modal
-                        const modal = document.createElement('div');
-                        modal.style.position = 'fixed';
-                        modal.style.top = '0';
-                        modal.style.left = '0';
-                        modal.style.width = '100%';
-                        modal.style.height = '100%';
-                        modal.style.backgroundColor = 'rgba(0,0,0,0.9)';
-                        modal.style.display = 'flex';
-                        modal.style.alignItems = 'center';
-                        modal.style.justifyContent = 'center';
-                        modal.style.zIndex = '10000';
-                        modal.style.cursor = 'pointer';
-                        
-                        const modalImg = document.createElement('img');
-                        modalImg.src = img.src;
-                        modalImg.style.maxWidth = '90%';
-                        modalImg.style.maxHeight = '90%';
-                        modalImg.style.objectFit = 'contain';
-                        
-                        modal.appendChild(modalImg);
-                        document.body.appendChild(modal);
-                        
-                        // Close modal on click
-                        modal.addEventListener('click', function() {
-                            document.body.removeChild(modal);
-                        });
-                    }
-                });
-            });
         });
     </script>
 </body>
+
 </html>
