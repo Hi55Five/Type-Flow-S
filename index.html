@@ -521,6 +521,17 @@
             flex-wrap: wrap;
             gap: 15px;
             margin-top: 20px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn-instruction {
+            color: var(--text-secondary);
+            font-size: 12px;
+            margin-top: 5px;
+            text-align: center;
+            font-style: italic;
+            opacity: 0.8;
         }
 
         /* Footer */
@@ -926,11 +937,16 @@
                         <button class="copy-btn" id="copy-btn">
                             <i class="fas fa-copy"></i> Copiar Código (celular)
                         </button>
-
-                        <a class="btn btn-primary"
-                            href="javascript:(function(){const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/Hi55Five/Type@main/script.js?'+Date.now();document.head.appendChild(s);})();">
-                            Arrastar e soltar (PC)
-                        </a>
+                        
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 5px;">
+                            <a class="btn btn-primary"
+                                href="javascript:(function(){const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/Hi55Five/Type@main/script.js?'+Date.now();document.head.appendChild(s);})();">
+                                Script Redação Paraná (PC)
+                            </a>
+                            <div class="btn-instruction">
+                                arraste para a barra de favoritos
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
